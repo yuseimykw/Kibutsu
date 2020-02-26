@@ -1,12 +1,12 @@
 import React from "react"
 import Header from "./Header"
-import Wrap from "./Wrap"
+import Front from "./Front"
 
 function App() {
   return (
     <>
       <Header />
-      <Wrap />
+      <Front />
     </>
   )
 }
