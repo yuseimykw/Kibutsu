@@ -1,0 +1,22 @@
+{
+  "jugyou": [
+    {
+      "id": 0,
+      "teacher": "山田太郎",
+      "subName": "経済学",
+      "evaluation": "鬼",
+      "week": "月曜",
+      "term": 1,
+      "comment": "めっちゃむずい！"
+    },
+    {
+      "id": 1,
+      "teacher": "佐藤次郎",
+      "subName": "経営学",
+      "evaluation": "仏",
+      "week": "火曜",
+      "term": 2,
+      "comment": "めっちゃらく！"
+    }
+  ]
+}
