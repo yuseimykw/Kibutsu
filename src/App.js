@@ -1,15 +1,33 @@
-import React from 'react'
-import Front from "./components/Front"
+import React, { useState, useEffect } from 'react'
+import Front from "./components/Front/Front"
 import axios from "axios"
 
 const App = () => {
+
+  const [jugyous, setJugyous] = useState([])
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3001/jugyou")
+      .then(response => {
+        setJugyous(response.data)
+      })
+      .catch(error => {
+        alert("通信失敗したよ！")
+      })
+  }, [])
+
+
   return (
     <>
       <header>
         <h1>鬼仏表+</h1>
-        <figure class="register-icon"></figure>
+        <figure className="register-icon"></figure>
       </header>
-      <Front />
+      <Front jugyous={jugyous} />
+      <footer>
+        <small>お問い合わせは〇〇まで！</small>
+      </footer>
     </>
   )
 }
