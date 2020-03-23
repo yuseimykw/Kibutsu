@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/jugyou")
+      .get("http://localhost:3001/jugyous")
       .then(response => {
         setJugyous(response.data)
       })
@@ -22,7 +22,7 @@ const App = () => {
     <>
       <header>
         <h1>鬼仏表+</h1>
-        <figure className="register-icon"></figure>
+        <figure className="registerIcon"></figure>
       </header>
       <Front jugyous={jugyous} />
       <footer>

@@ -4,7 +4,7 @@ const Jikanwari = () => {
   return (
     <>
       <section className="jikanwari">
-        <div className="j-items">
+        <div className="jikanwariItems">
           <ul className="one">
             <li>理論社会学<input type="checkbox" /></li>
             <li><input type="checkbox" /></li>

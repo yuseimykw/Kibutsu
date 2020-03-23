@@ -1,20 +1,19 @@
 import React from 'react'
 import FrontList from "./FrontList"
-import Upload from './Upload'
 
 const Front = ({ jugyous }) => {
 
   return (
     <>
       <section className="contents">
-        <h2 className="page_title">一覧</h2>
-        <ul className="item_list">
+        <h2 className="pageTitle">一覧</h2>
+        <ul className="itemList">
           <FrontList jugyous={jugyous} />
         </ul>
       </section>
-      <section className="post_page">
-        <h2 className="page_title">投稿</h2>
-        <div className="post_content">
+      <section className="postPage">
+        <h2 className="pageTitle">投稿</h2>
+        <div className="postContent">
           <form action="sbumit">
             <p>教授名：</p>
             <input type="text" name="teacher" />
@@ -23,9 +22,9 @@ const Front = ({ jugyous }) => {
             <p>評価:</p>
             <b>仏</b>
             <input type="checkbox" name="hotoke" />
-            <input type="checkbox" name="yaya_hotoke" />
+            <input type="checkbox" name="yayaHotoke" />
             <input type="checkbox" name="basic" />
-            <input type="checkbox" name="yaya_oni" />
+            <input type="checkbox" name="yayaOni" />
             <input type="checkbox" name="oni" />
             <b>鬼</b>
             <p>曜日:</p>
@@ -49,7 +48,7 @@ const Front = ({ jugyous }) => {
             </select>
             <p>コメント:</p>
             <textarea name="comment" cols="30" rows="10"></textarea>
-            <button type="submit" className="submit_btn">送信</button>
+            <button type="submit" className="submitBtn">送信</button>
           </form>
         </div>
       </section>

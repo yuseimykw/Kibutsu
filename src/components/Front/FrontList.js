@@ -1,16 +1,32 @@
 import React from 'react'
 
 const FrontList = ({ jugyous }) => {
-
-  console.log(jugyous[0])
+  // const jugyou = jugyous[0]
+  // console.dir(jugyou.id)
 
   return (
-    <li className="item">
-      <h3>{jugyous[0].teacher}</h3>
-      <h3>{jugyous[0].subName}</h3>
-      <h3>{jugyous[0].date}</h3>
-    </li>
+    <section className="contents">
+      <h2 className="pageTitle">一覧</h2>
+      <ul className="itemList">
+
+        {jugyous.map((jugyou) => {
+          return (
+            <li>
+              <ul>
+                <li>{jugyou.teacher}</li>
+                <li>{jugyou.subName}</li>
+                <li>{jugyou.evaluation}</li>
+                <li>{jugyou.week}</li>
+                <li>{jugyou.term}</li>
+                <li>{jugyou.date}</li>
+                <li>{jugyou.comment}</li>
+              </ul>
+            </li>
+          )
+        })}
+      </ul>
+    </section>
   )
 }
 
-export default FrontList
+export default FrontList 
