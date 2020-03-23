@@ -1,17 +1,19 @@
 import React from 'react'
 import FrontList from "./FrontList"
+import styled from 'styled-components'
 
 const Front = ({ jugyous }) => {
 
   return (
     <>
-      <section className="contents">
-        <h2 className="pageTitle">一覧</h2>
-        <ul className="itemList">
+      <Contents>
+        <h2>一覧</h2>
+        <ul>
           <FrontList jugyous={jugyous} />
         </ul>
-      </section>
-      <section className="postPage">
+      </Contents>
+
+      <PostPage>
         <h2 className="pageTitle">投稿</h2>
         <div className="postContent">
           <form action="sbumit">
@@ -51,9 +53,34 @@ const Front = ({ jugyous }) => {
             <button type="submit" className="submitBtn">送信</button>
           </form>
         </div>
-      </section>
+      </PostPage>
     </>
   )
 }
+
+const Contents = styled.section`
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  ul{
+    list-style:none;
+    padding:0;
+    margin:5px auto;
+    width:80%;
+  }
+`
+
+const PostPage = styled.section`
+  background-color:rgb(160, 182, 204);
+  color:black;
+  width:85%;
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    display:block;
+  }
+`
 
 export default Front
