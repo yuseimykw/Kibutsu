@@ -6,22 +6,21 @@ const FrontList = ({ jugyous }) => {
   // console.dir(jugyou.id)
 
   return (
-
-    <ul>
-
-      {jugyous.map((jugyou) => {
-        return (
-          <li>
-            <SimpleItem>
-              <li>{jugyou.teacher}</li>
-              <li>{jugyou.subName}</li>
-              <li>{jugyou.date}</li>
-            </SimpleItem>
-          </li>
-        )
-      })}
-    </ul>
-
+    <>
+      {
+        jugyous.map((jugyou, i) => {
+          return (
+            <li key={i} >
+              <SimpleItem>
+                <li>{jugyou.teacher}</li>
+                <li>{jugyou.subName}</li>
+                <li>{jugyou.date}</li>
+              </SimpleItem>
+            </li>
+          )
+        })
+      }
+    </>
   )
 }
 
